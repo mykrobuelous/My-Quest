@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+@import 'tailwindcss';
+@import './shared/utils/tailwind/utilStyles.css';
+
+@theme {
+     --color-background: #050505;
+     --color-card: #111111;
+     --color-input: #1f1f21;
+     --color-stroke: #1b1b1b;
+     --color-pri-text: white;
+     --color-sec-text: #777777;
+     --color-gray-selected: #1e1e1e;
+     --color-input-stroke: #c0c0c0;
+
+     --color-cus-green: #2f6839;
+     --color-back-green: #d7efc9;
+
+     --color-cus-red: #7f332a;
+     --color-back-red: #fedee2;
+
+     --color-cus-blue: #355461;
+     --color-back-blue: #cbdff2;
+
+     --color-cus-yellow: #e4b639;
+     --color-back-yellow: #fff2c6;
+
+     --color-cus-pink: #e881c2;
+     --color-back-pink: #fde1f1;
+
+     --color-cus-orange: #ffa500;
+     --color-back-orange: #ffe6bf;
+
+     --color-cus-purple: #3b1d49;
+     --color-back-purple: #dfc4f2;
+}
+
+@layer base {
+     /* Font Family */
+     * {
+          font-family: 'Inter', sans-serif;
+     }
+
+     /* Custom Scrollbar */
+     *::-webkit-scrollbar {
+          display: none;
+     }
+
+     /* Number Scroll */
+     input::-webkit-outer-spin-button,
+     input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+     }
+     input[type='number'] {
+          appearance: textfield;
+     }
+
+     /* Eye Color */
+     input::-ms-reveal,
+     input::-webkit-credentials-auto-fill-button {
+          display: none !important;
+     }
+
+     /* Body Titles */
+     body {
+          @apply text-white;
+          font-family: 'Inter', sans-serif;
+     }
+}
