@@ -16,6 +16,10 @@ export const exerciseCategoryData: ExerciseCategoryType[] = [
           id: 'EXER003' as IDBrand,
           name: 'Treadmill',
      },
+     {
+          id: 'EXER004' as IDBrand,
+          name: 'Step Up',
+     },
 ];
 
 export const exerciseData: ExerciseType[] = [
