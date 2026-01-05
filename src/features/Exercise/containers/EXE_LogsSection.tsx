@@ -68,6 +68,7 @@ const EXE_LogsSection: React.FC<Props> = ({ className }) => {
                                    removeHandler={() =>
                                         openModal(
                                              <ConfirmModal
+                                                  message="Are you sure you want to delete exercise data?"
                                                   onConfirm={() => {
                                                        removeExerciseHandler(
                                                             exerItem.id,

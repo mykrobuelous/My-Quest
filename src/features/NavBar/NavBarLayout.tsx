@@ -4,7 +4,8 @@
 import { twMerge } from 'tailwind-merge';
 import NAV_AppLogo from './containers/NAV_AppLogo';
 import NAV_NavItemList from './containers/NAV_NavItemList';
-import NAV_Accounts from './containers/NAV_Accounts';
+import NAV_Logout from './containers/NAV_Logout';
+import NAV_Download from './containers/NAV_Download';
 
 /* ===================================================================== */
 /*
@@ -26,7 +27,8 @@ const NavBarLayout: React.FC<Props> = ({ className }) => {
           <div className={twMerge('flex flex-col', 'h-full w-50', className)}>
                <NAV_AppLogo />
                <NAV_NavItemList />
-               <NAV_Accounts />
+               <NAV_Download />
+               <NAV_Logout />
           </div>
      );
 };

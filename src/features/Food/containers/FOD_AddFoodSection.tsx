@@ -56,7 +56,14 @@ const FOD_AddFoodSection: React.FC<Props> = ({ className }) => {
                     className="w-40"
                     Icon={Delete}
                     disabled={selectedMealId ? false : true}
-                    onClick={() => openModal(<ConfirmModal onConfirm={removeMealHandler} />)}
+                    onClick={() =>
+                         openModal(
+                              <ConfirmModal
+                                   message="Are you sure you want to delete meal data?"
+                                   onConfirm={removeMealHandler}
+                              />
+                         )
+                    }
                />
           </div>
      );

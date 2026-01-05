@@ -1,5 +1,5 @@
 // 🧪 UTILITY IMPORT
-import { setPageNavAction } from '@/shared/store/reducers/navReducer';
+import { setLoginAction, setPageNavAction } from '@/shared/store/reducers/navReducer';
 import { useAppDispatch } from '@/shared/store/store';
 import type { PageNavType } from '@/shared/types/navTypes';
 
@@ -19,7 +19,14 @@ const usePageNav = () => {
           [dispatch]
      );
 
-     return { setPageNav };
+     const setLogin = useCallback(
+          (login: boolean) => {
+               dispatch(setLoginAction(login));
+          },
+          [dispatch]
+     );
+
+     return { setPageNav, setLogin };
 };
 
 export default usePageNav;

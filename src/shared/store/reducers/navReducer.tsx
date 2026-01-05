@@ -12,7 +12,7 @@ interface InitialState {
 
 const initialState: InitialState = {
      pageNav: 'home',
-     login: true,
+     login: false,
 };
 
 const navReducer = createSlice({
@@ -22,9 +22,12 @@ const navReducer = createSlice({
           setPageNavAction: (state, action: PayloadAction<PageNavType>) => {
                state.pageNav = action.payload;
           },
+          setLoginAction: (state, action: PayloadAction<boolean>) => {
+               state.login = action.payload;
+          },
      },
 });
 
 export const navState = (state: RootState) => state.nav;
-export const { setPageNavAction } = navReducer.actions;
+export const { setPageNavAction, setLoginAction } = navReducer.actions;
 export default navReducer.reducer;

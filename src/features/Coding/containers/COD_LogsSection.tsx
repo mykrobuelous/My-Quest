@@ -64,6 +64,7 @@ const COD_LogsSection: React.FC<Props> = ({ className }) => {
                                    removeHandler={() =>
                                         openModal(
                                              <ConfirmModal
+                                                  message="Are you sure you want to delete coding data?"
                                                   onConfirm={() =>
                                                        removeCodingHandler(
                                                             logItem.id,

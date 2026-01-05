@@ -22,6 +22,7 @@ const selectCodingMinutes = (state: RootState) => state.coding.totalMinutes;
 const selectJournals = (state: RootState) => state.journal.journalData;
 const selectSelectedJournalId = (state: RootState) => state.journal.selectedJournalId;
 const selectJournalCategory = (state: RootState) => state.journal.journalCategory;
+const selectCoding = (state: RootState) => state.coding.codingData;
 
 export const logsSelector = createSelector([selectLogs], (logs) => {
      return logs.map((logItem) => ({ ...logItem, date: convertTimestampDate(logItem.timestamp) }));
@@ -111,5 +112,12 @@ export const selectedJournalSelector = createSelector(
                     (catItem) => newJournalData?.categoryId === catItem.id
                ),
           };
+     }
+);
+
+export const allDataSelector = createSelector(
+     [selectLogs, selectExercise, selectFoodMeals, selectCoding, selectJournals],
+     (level, exercise, food, coding, journal) => {
+          return { level, exercise, food, coding, journal };
      }
 );

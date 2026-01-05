@@ -131,7 +131,12 @@ const JOR_UpdateJournalView: React.FC<Props> = ({ className }) => {
                          Icon={Delete}
                          className="w-40"
                          onClick={() =>
-                              openModal(<ConfirmModal onConfirm={removeJournalHandler} />)
+                              openModal(
+                                   <ConfirmModal
+                                        message="Are you sure you want to delete journal?"
+                                        onConfirm={removeJournalHandler}
+                                   />
+                              )
                          }
                     />
                </div>

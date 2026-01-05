@@ -18,15 +18,17 @@ import { useModal } from '@/shared/context/useModal';
 interface Props {
      className?: string;
      onConfirm: () => void;
+     message: string;
+     title?: string;
 }
 
-const ConfirmModal: React.FC<Props> = ({ className, onConfirm }) => {
+const ConfirmModal: React.FC<Props> = ({ className, onConfirm, message, title = 'Confirm' }) => {
      const { closeModal } = useModal();
      return (
           <div className={twMerge('flex flex-col gap-4', 'p-4', className)}>
                <div className="flex flex-col gap-1">
-                    <p className="text-2xl leading-none font-bold">Confirm</p>
-                    <p className="text-sm">Are you sure you want to delete?</p>
+                    <p className="text-2xl leading-none font-bold">{title}</p>
+                    <p className="text-sm">{message}</p>
                </div>
                <div className="flex-center flex justify-between">
                     <GenButton
